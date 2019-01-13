@@ -456,13 +456,14 @@ margin-left: 5px;
 }
 
 .profile_wrapper{
-  width:80%;
+  width:90%;
   margin:40px auto;
   min-height: 200px;
 }
 .profile{
   background: #fff;
   border: 1px solid #ccc;
+  min-height: 100px;
 }
 .tab {
   width:60%;
