@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lan="en">
 <head>
+  <meta charset="utf-8"/>
   <title>Home Page</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,9 +21,8 @@
   <ul>
     <li><a href="parcel_orders.html"></i>Parcel Orders</a></li>
     <li><a href="profile.html"></i>Profile</a></li>
-
-    <li><a href="signin.html">Sign In</a></li>
-    <li><a href="signup.html">Sign Up</a></li>
+    <li><a id="signin"></a></li>
+   
   </ul>
 </nav>
 </div>
@@ -34,43 +34,29 @@
 </div>
 </div>
 
+
+
+
 <div class="profile_wrapper">
 <div class="tab">
- <button class="tab_links" onclick="profile(event, 'Delivered')">Delivered Parcels (2)</button>
- <button class="tab_links" onclick="profile(event, 'Transit')">In Transit (0)</button>
- <button class="tab_links" onclick="profile(event, 'All')" id="default">All Parcel Orders (2)</button>
+ <button class="tab_links" onclick="profile(event, 'Delivered')">Delivered Parcel</button>
+ <button class="tab_links" onclick="profile(event, 'Transit')">In Transit</button>
+ <button class="tab_links" onclick="profile(event, 'All')" id="default">All Parcel Orders</button>
 </div>
 
 <div class="profile">
 <div id="Delivered" class="tab_content">
-    <table>
-      <tr><th>Parcel ID</th><th>Pickup Location</th><th>Destination</th><th>Weight(Kg)</th><th>Plan</th><th>Quotation (Ksh)</th><th>Status</th><th>Edit Order</th><th>Cancel Order</th></tr>
-      <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
-  </tr>
-
-        <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
-  </tr>
-
-    </table>
-
+<p id="message"></p>
 </div>
 
 <div id="Transit" class="tab_content">
-
+<p id="message"></p>
 
 
 </div>
 
 <div id="All" class="tab_content">
-    <table>
-      <tr><th>Parcel ID</th><th>Pickup Location</th><th>Destination</th><th>Weight(Kg)</th><th>Plan</th><th>Quotation (Ksh)</th><th>Status</th><th>Edit Order</th><th>Cancel Order</th></tr>
-      <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
-  </tr>
-
-        <tr><td>#201800012</td><td>Nairobi</td><td>Kisumu</td><td>20kg</td><td>Priority</td><td>1,000</td><td>None</td><td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td><td><i class="fa fa-trash"></i></td>
-  </tr>
-
-    </table>
+<p id="message"></p>
   </div>
 </div>
 </div></div>
@@ -116,4 +102,21 @@ document.getElementById("default").click();
 
 
 </body>
+<script src="js/profile.js"></script>
 </html>
+
+
+
+
+      <tr><td>#201800012</td>
+      <td>Nairobi</td>
+      <td>Kisumu</td>
+      <td>20kg</td>
+      <td>Priority</td>
+      <td>1,000</td>
+      <td>None</td>
+      <td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td>
+      <td><i class="fa fa-trash"></i></td>
+  </tr>
+
+    </table>
