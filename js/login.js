@@ -1,4 +1,4 @@
-//document.getElementById("signup").addEventListener("submit", signup);
+window.localStorage.clear();
 document.getElementById("signin").addEventListener("submit", signin);
 
 
@@ -26,27 +26,26 @@ function signin(event) {
         .then(res => res.json())
         .then(data => {
             let message =  data["Message"];
-            if (message == "Invalid Password or username") {
+                  
+            if (message === "Invalid Password or username") {
                 document.getElementById("message").innerHTML = message;
                 console.log(message);
                 
             }
             else { 
-                if (message == "Signed in as Admin"){
-                 window.localStorage.setItem('token', data["access_token"])
-                redirect: window.location.replace("./all_orders_admin.html")
-                console.log(message);   
+                    window.localStorage.setItem('token', data["access_token"]);
+                    window.localStorage.setItem('username', username);
+                    window.localStorage.setItem('password', password);
+                    redirect: window.location.replace("./parcel_orders.html")  
+ 
                 }
-                else{
-                window.localStorage.setItem('token', data["access_token"])
-                redirect: window.location.replace("./index.html")
-                console.log(message);
-
-                }
-            }
+            
 
         })
         .catch(error => console.error(error))
 
 }
 
+
+
+ 
