@@ -26,7 +26,7 @@ function signup(event) {
         .then(res => res.json())
         .then(data => {
             let message = `${data.Message}`;
-            if (message == "Signup successiful") {
+            if (message === "Signup successiful") {
                 redirect: window.location.replace("./index.html")
                 console.log(message);
             }

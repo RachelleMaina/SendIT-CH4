@@ -263,6 +263,68 @@ color:#fff;
   text-decoration:underline;
 }
 
+/*Quotation*/
+
+#quotation_disabled {
+  margin:20px auto ;
+  text-align:center;
+  background:#ccc;
+   padding:20px 0;
+  border-radius:5px 5px 0 0;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  border:1px solid #333;
+  width:80%;
+  font-size:14px;
+}
+
+ #quotation_disabled input[type=submit]{
+  width:11%;
+  padding:10px 5px;
+  margin:10px;
+  border:1px solid #670C09;
+  border-radius:3px;
+  background:#670C09;
+  color:#ffffff;
+
+} 
+
+#quotation_disabled label{
+  display: inline-block;
+  width:12%;
+}
+#quotation_disabled select{
+  width:14%;
+  padding:10px;
+  margin:10px;
+  border:1px solid #CDCDCD;
+  border-radius:2px;
+  font-size:14px;
+}
+#quotation_disabled input[type=text]{
+  width:12%;
+  padding:10px;
+  margin:10px;
+  border:1px solid #CDCDCD;
+  border-radius:2px;
+  font-size:14px;
+} 
+#quotation_disabled input[type=submit]:hover, .sign_up input[type=submit]:hover, .sign_in input[type=submit]:hover {
+     background:#ccc;
+ color:#670C09;
+}
+#quotation_disabled input[type=reset]:hover, .sign_up input[type=reset]:hover, .sign_in input[type=reset]:hover {
+    background-color: #ddd;
+}
+
+.disabled{
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.4;
+}
+
+
+
+
 /*Create Order*/
 .create_order label{
   display: inline-block;
