@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lan="en">
 <head>
+  <meta charset="utf-8"/>
   <title>Home Page</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,9 +14,11 @@
 
 <a href="index.html"><img src="img/logo.png" height="80" width="80"></a>
   </div>
-<div class="nav-admin" >
+<<div class="nav-admin" >
 
-<p><i class ="fa fa-user"></i> Welcome Admin</p> 
+
+<p><i class ="fa fa-user"></i> Welcome Admin</p>
+ <p><a id="signin"></a></p>
 </div>
 </div>
 </div>
@@ -26,26 +29,28 @@
 </div>
 <div class="quotation create_order">
 
-  <form method="post" action="all_orders_admin.html">
+  <form id="changeLocation">
     <label for="description">Parcel ID: <span class="asterik"> *</span></label>
-    <input type="text" name="description" id="description" Value="#20180045">
+    <input type="text" name="description" id="parcelId"><br>
     <label for="from">Present Location: <span class="asterik"> *</span></label>
-    <select>
+    <select id="location">
       <option value="nairobi">Nairobi</option>
       <option value="nakuru">Nakuru</option>
       <option value="mombasa">Mombasa</option>
       <option value="kisumu">Kisumu</option>
       <option value="kitale">Kitale</option>
+      <input type="submit" class="update" name="loc" value="Change">
     </select>
+    </form>
+    <form id="changeStatus">
     <label for="from">Status: <span class="asterik"> *</span></label>
-    <select>
-      <option value="nairobi">None</option>
-      <option value="nakuru">In Transit</option>
-      <option value="mombasa">Delivered</option>
+    <select id="status">
+      <option value="In Transit">In Transit</option>
+      <option value="Delivered">Delivered</option>
+      <input type="submit" class="update" name="dest" value="Change">
     </select><br>
   </form>
-<a href="all_orders_admin.html"><button class="update" name="login" id="login">Update</button></a>
-<button class="reset" name="login" id="login">Cancel</button>
+
 </div>
 </div>
 
@@ -61,4 +66,5 @@
 </div>
 </div>
 </body>
+<script src="js/edit_admin.js"></script>
 </html>
