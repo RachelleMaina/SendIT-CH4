@@ -26,7 +26,7 @@ window.onload = function() {
                 if (data["Data"]) {
 
                     let table_pending = `
-        		<table>
+            <table>
       <tr><th>Parcel ID</th>
         <th>Pickup Location</th>
         <th>Destination</th>
@@ -37,8 +37,17 @@ window.onload = function() {
         <th>Cancel Order</th>
       </tr>`;
 
-                    let table_transit = table_pending;
-                    let table_delivered = table_pending;
+
+                    let table_delivered = `
+            <table>
+      <tr><th>Parcel ID</th>
+        <th>Pickup Location</th>
+        <th>Destination</th>
+        <th>Weight(Kg)</th>
+        <th>Quotation (Ksh)</th>
+        <th>Status</th>
+      </tr>`;
+                    let table_transit = table_delivered;
 
 
                     data["Data"].forEach(res => {
@@ -52,7 +61,7 @@ window.onload = function() {
       <td>${res["weight"]}</td>
       <td>${res["price"]}</td>
       <td>${res["status"]}</td>
-      <td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td>
+      <td><a href="change_destination.html?parcelId=${res["order_id"]}"><i class="fa fa-pencil"></i></a></td>
       <td><i class="fa fa-trash"></i></td>
   </tr>
 `;
@@ -78,8 +87,7 @@ window.onload = function() {
       <td>${res["weight"]}</td>
       <td>${res["price"]}</td>
       <td>${res["status"]}</td>
-      <td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td>
-      <td><i class="fa fa-trash"></i></td>
+
   </tr>
 `;
                         }
@@ -102,8 +110,7 @@ window.onload = function() {
       <td>${res["weight"]}</td>
       <td>${res["price"]}</td>
       <td>${res["status"]}</td>
-      <td><a href="change_destination.html"><i class="fa fa-pencil"></i></a></td>
-      <td><i class="fa fa-trash"></i></td>
+
   </tr>
 `;
                         }
