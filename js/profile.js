@@ -34,7 +34,6 @@ window.onload = function() {
         <th>Quotation (Ksh)</th>
         <th>Status</th>
         <th>Edit Order</th>
-        <th>Cancel Order</th>
       </tr>`;
 
 
@@ -62,7 +61,6 @@ window.onload = function() {
       <td>${res["price"]}</td>
       <td>${res["status"]}</td>
       <td><a href="change_destination.html?parcelId=${res["order_id"]}"><i class="fa fa-pencil"></i></a></td>
-      <td><i class="fa fa-trash"></i></td>
   </tr>
 `;
                         }

@@ -1,4 +1,3 @@
-window.localStorage.clear();
 document.getElementById("signin").addEventListener("submit", signin);
 
 
@@ -32,11 +31,18 @@ function signin(event) {
                 console.log(message);
                 
             }
-            else { 
+            else if (message === "Signed in as Admin"){
                     window.localStorage.setItem('token', data["access_token"]);
                     window.localStorage.setItem('username', username);
                     window.localStorage.setItem('password', password);
-                    redirect: window.location.replace("./parcel_orders.html")  
+                    redirect: window.location.replace("./all_orders_admin.html");
+                 }
+                else{
+               
+                    window.localStorage.setItem('token', data["access_token"]);
+                    window.localStorage.setItem('username', username);
+                    window.localStorage.setItem('password', password);
+                    redirect: window.location.replace("./parcel_orders.html"); 
  
                 }
             

@@ -1,7 +1,9 @@
 window.onload = function() {
+    
     if (window.localStorage.getItem("username") == null) {
         document.getElementById("signin").innerHTML = "Login";
         document.getElementById("signin").setAttribute("href", "./signin.html");
+        redirect: window.location.replace("./signin.html") 
 
     } else {
         document.getElementById("signin").innerHTML = "Logout";
@@ -25,7 +27,7 @@ function getQuote(event) {
     let check_weight = /^\d*\.?\d+$/.test(weight);
 
     if (weight == 0 || weight === "" || check_weight === false) {
-        document.getElementById("info").innerHTML = "Invalid weight";
+        document.getElementById("message").innerHTML = "Invalid weight";
     } else {
         document.getElementById("submit").disabled = true;
         document.getElementById("quotation_disabled").removeAttribute("class")
