@@ -25,7 +25,7 @@ window.onload = function() {
         let OrderId = Number(strOrderId);
         let current_location = document.getElementById("location").value;
 
-        fetch("http://rachel-sendit-api.herokuapp.com/api/v2/parcels/" + parcelId + "/presentLocation", {
+        fetch("https://rachel-sendit-api.herokuapp.com/api/v2/parcels/" + parcelId + "/presentLocation", {
                 mode: "cors",
                 method: "PUT",
                 headers: {
@@ -59,7 +59,7 @@ window.onload = function() {
         let parcelId = Number(strParcelId);
         let status = document.getElementById("status").value;
 
-        fetch("http://rachel-sendit-api.herokuapp.com/api/v2/parcels/" + parcelId + "/status", {
+        fetch("https://rachel-sendit-api.herokuapp.com/api/v2/parcels/" + parcelId + "/status", {
                 mode: "cors",
                 method: "PUT",
                 headers: {
