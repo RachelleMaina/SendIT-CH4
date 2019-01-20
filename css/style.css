@@ -31,7 +31,9 @@ td, th {
 }
 tr:nth-child(even){background: #f2f2f2;}
 .signin a, .signup a{text-decoration: none;}
-
+#message, #info{
+  color:red;
+}
 .container{
   margin:0 auto;
   background:#F9F9F9;

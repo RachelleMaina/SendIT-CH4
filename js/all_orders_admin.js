@@ -10,7 +10,7 @@ window.onload = function() {
         document.getElementById("signin").setAttribute("href", "./index.html");
 
 
-        fetch("http://rachel-sendit-api.herokuapp.com/api/v2/parcels", {
+        fetch("https://rachel-sendit-api.herokuapp.com/api/v2/parcels", {
                 mode: "cors",
                 method: "GET",
                 headers: {

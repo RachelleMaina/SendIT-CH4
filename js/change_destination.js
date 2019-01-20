@@ -23,7 +23,7 @@ window.onload = function() {
         let parcelId = Number(strParcelId);
         let destination = document.getElementById("destination").value;
 
-        fetch("http://rachel-sendit-api.herokuapp.com/api/v2/parcels/" + parcelId + "/destination", {
+        fetch("https://rachel-sendit-api.herokuapp.com/api/v2/parcels/" + parcelId + "/destination", {
                 mode: "cors",
                 method: "PUT",
                 headers: {

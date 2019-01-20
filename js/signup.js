@@ -8,7 +8,7 @@ function signup(event) {
     let phone = document.getElementById("phone").value;
     let password1 = document.getElementById("password1").value;
 
-    fetch("http://rachel-sendit-api.herokuapp.com/api/v2/auth/signup", {
+    fetch("https://rachel-sendit-api.herokuapp.com/api/v2/auth/signup", {
             mode: "cors",
             method: "POST",
             headers: {
