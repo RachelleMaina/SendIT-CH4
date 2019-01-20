@@ -1,11 +1,17 @@
 window.onload = function() {
 
     if (window.localStorage.getItem("username") == null) {
-        document.getElementById("signin").innerHTML = "Login";
-        document.getElementById("signin").setAttribute("href", "./signin.html");
+ redirect: window.location.replace("./signin.html");
 
+    }
+    else if (window.localStorage.getItem("username") !== "Maina") {
+ redirect: window.location.replace("./forbidden.html");
 
-    } else {
+    }
+    else if (location.search.split('parcelId=')[1] == null){
+       redirect: window.location.replace("./all_orders_admin.html");  
+    }
+     else {
         document.getElementById("signin").innerHTML = "Logout";
         document.getElementById("signin").setAttribute("href", "./index.html");
         let strId = location.search.split('parcelId=')[1];

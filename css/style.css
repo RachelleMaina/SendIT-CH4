@@ -5,6 +5,10 @@ body{
   font-family: arial, sans-serif;
 
 }
+.forbidden{
+  font-weight: bold;
+  font-size: 40px;
+}
 h1, h3, h4{  font-family: 'Roboto', sans-serif;}
 h5, p, footer, .forgot_password{font-family: 'EB Garamond', serif; }
 

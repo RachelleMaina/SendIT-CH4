@@ -1,11 +1,15 @@
 window.onload = function() {
 
     if (window.localStorage.getItem("username") == null) {
-        document.getElementById("signin").innerHTML = "Login";
-        document.getElementById("signin").setAttribute("href", "./signin.html");
+ redirect: window.location.replace("./signin.html");
 
 
-    } else {
+    } 
+    else if (location.search.split('parcelId=')[1] == null){
+       redirect: window.location.replace("./profile.html");  
+    }
+
+    else {
         document.getElementById("signin").innerHTML = "Logout";
         document.getElementById("signin").setAttribute("href", "./index.html");
         let strId = location.search.split('parcelId=')[1];
