@@ -48,5 +48,6 @@ function signup(event) {
         })
         .catch(error => console.error(error))
 
+
 }
-}
+
