@@ -20,6 +20,8 @@ Google Chrome browser
 3. Open `index.html` on a browser
 4. Alternatively visit the hosting link at https://rachel-ch4.herokuapp.com
 
+ - Admin: Username: "Maina" Password: "maina"
+ - User: Username: "Rachel" Password: "rachel"
 
 ## Built With
 

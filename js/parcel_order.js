@@ -28,10 +28,16 @@ function getQuote(event) {
 
     if (weight == 0 || weight === "" || check_weight === false) {
         document.getElementById("message").innerHTML = "Invalid weight";
-    } else {
+    } else if (weight > 10){
+ document.getElementById("message").innerHTML = "Weight cannot exceed 10kg";
+    }
+ else if (pickup_location === destination){
+ document.getElementById("message").innerHTML = "No Services provided within the same city";
+    }
+    else {
         document.getElementById("submit").disabled = true;
         document.getElementById("quotation_disabled").removeAttribute("class")
-        let express = weight * 100;
+        let express = weight * 300;
         let priority = weight * 200;
         let value = weight * 100;
         document.getElementById("express").value = express;
@@ -76,8 +82,10 @@ function createParcelOrder(event) {
         .then(data => {
             
             let message = `${data.Message}`;
-
-            if (message === "Parcel Order Created") {
+            if (message === "undefined"){
+                redirect: window.location.replace("./signup.html");
+            }
+            else if (message === "Parcel Order Created") {
                 document.getElementById("message").innerHTML = message;
                 document.getElementById("quotation_disabled").setAttribute("class", "disabled")
                 document.getElementById("weight").value = "";

@@ -1,8 +1,7 @@
 window.onload = function() {
 
     if (window.localStorage.getItem("username") == null) {
-        document.getElementById("signin").innerHTML = "Login";
-        document.getElementById("signin").setAttribute("href", "./signin.html");
+       redirect: window.location.replace("./signin.html");
 
 
     } else {

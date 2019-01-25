@@ -36,7 +36,8 @@ function signup(event) {
         .then(data => {
             let message = `${data.Message}`;
             if (message === "Signup successiful") {
-                redirect: window.location.replace("./signup.html")
+                redirect: window.location.replace("./signin.html");
+
                 console.log(message);
             }
             else {
@@ -48,6 +49,8 @@ function signup(event) {
         })
         .catch(error => console.error(error))
 
+
+}
 
 }
 

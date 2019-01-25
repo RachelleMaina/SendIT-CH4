@@ -1,10 +1,12 @@
 window.onload = function() {
 
-    if (window.localStorage.getItem("username") == null) {
-        document.getElementById("signin").innerHTML = "Login";
-        document.getElementById("signin").setAttribute("href", "./signin.html");
+       if (window.localStorage.getItem("username") == null) {
+ redirect: window.location.replace("./signin.html");
 
-
+    }
+    else if (window.localStorage.getItem("username") !== "Maina") {
+ redirect: window.location.replace("./forbidden.html");
+ 
     } else {
         document.getElementById("signin").innerHTML = "Logout";
         document.getElementById("signin").setAttribute("href", "./index.html");
